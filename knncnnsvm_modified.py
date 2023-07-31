@@ -71,7 +71,7 @@ model.add(Dense(128,activation='relu'))
 model.add(Dense(1,activation='sigmoid'))
 
 model.compile(optimizer='adam',loss='binary_crossentropy',metrics=['accuracy'])
-model.fit(xtrain,ytrain,batch_size=5,epochs=50)
+model.fit(xtrain,ytrain,batch_size=20,epochs=1)
 ypred = model.predict(xtest)
 if (model.predict([[1,2,2346.00,56378888888888888.00,4035679.00,46000.00,324.00]])):
     print("Fraud")
@@ -79,7 +79,7 @@ else:
     print("NOT a FRAUD")
 
 
-##CNN
+##KNN
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense,Flatten,Conv1D,BatchNormalization,Dropout
 # import model
